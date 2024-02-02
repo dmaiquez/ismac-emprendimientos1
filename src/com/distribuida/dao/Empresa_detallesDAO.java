@@ -5,6 +5,8 @@ import com.distribuida.entities.Empresa_detalles;
 import java.util.List;
 
 public interface Empresa_detallesDAO {
+	
+	//DAO IMPL
 
 public List<Empresa_detalles> findAll();
 	
