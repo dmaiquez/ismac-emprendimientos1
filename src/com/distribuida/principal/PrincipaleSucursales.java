@@ -29,10 +29,10 @@ public class PrincipaleSucursales {
 		// sucursalesDAO.del(59);
 				
 		//findAll
-		List<Sucursales> sucursales = sucursalesDAO.findAll();
+		List<Sucursales> sucursales1 = sucursalesDAO.findAll();
 				
 		//Impresion
-		for(Sucursales item : sucursales){
+		for(Sucursales item : sucursales1){
 		  		System.out.println(item.toString());
 		}
 				

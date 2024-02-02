@@ -30,7 +30,6 @@ public class loginCliente {
     @Column(name = "newpassword")
 	private String newpassword;
     @Column(name = "confirmpassword")
-@Column(name = "confirmpassword")
 	private String confirmpassword;
 	@Column(name = "logincorreo")
 	private String loginCorreo;
