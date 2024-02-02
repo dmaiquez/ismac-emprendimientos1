@@ -5,28 +5,28 @@ import java.util.List;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.distribuida.dao.ClienteDAO;
-import com.distribuida.entities.cliente;
+import com.distribuida.entities.Cliente;
+
 
 public class PrincipalCliente {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-	}
+	
 	ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
 	
 	ClienteDAO clienteDAO = context.getBean("clienteDAOImpl",ClienteDAO.class);
-	ClienteDAO clienteDAO222 = context.getBean("clienteDAOImpl",ClienteDAO.class);
-	ClienteDAO clienteDAO333 = context.getBean("clienteDAOImpl",ClienteDAO.class);
+
 	
 	//CRUD
 	
 	
-	add
-	cliente cliente1 = new cliente();
+	//add
+	Cliente cliente1 = new Cliente();
 	clienteDAO.add();
 	
-	cliente cliente2 = new cliente();
+	Cliente cliente2 = new Cliente();
 	clienteDAO.add(cliente2);
 	
 //	//del
@@ -50,5 +50,6 @@ public class PrincipalCliente {
 	context.close();
 
 }
-
 }
+
+

@@ -29,8 +29,6 @@ public class loginCliente {
 	private String password;
     @Column(name = "newpassword")
 	private String newpassword;
-    @Column(name = "confirmpassword")
-@Column(name = "confirmpassword")
 	private String confirmpassword;
 	@Column(name = "logincorreo")
 	private String loginCorreo;
