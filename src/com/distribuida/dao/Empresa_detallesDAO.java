@@ -17,4 +17,6 @@ public List<Empresa_detalles> findAll();
 	public void up(Empresa_detalles empresa_detalles);
 	
 	public void del(int id);
+
+	public List<Empresa_detalles> findAll(String busqueda);
 }

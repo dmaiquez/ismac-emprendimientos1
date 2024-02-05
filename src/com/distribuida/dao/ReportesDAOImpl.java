@@ -10,73 +10,62 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.distribuida.entities.Empresa;
+import com.distribuida.entities.Reportes;
 
-import com.distribuida.entities.Empresa_detalles;
 
 @Repository
-public class Empresa_detallesDAOImpl implements Empresa_detallesDAO {
+public class ReportesDAOImpl implements ReportesDAO {
 
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Override
 	@Transactional
-	public List<Empresa_detalles> findAll() {
+	public List<Reportes> findAll() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery("from Empresa_deralles", Empresa_detalles.class).getResultList();
-		
+		return session.createQuery("from Reportes", Reportes.class).getResultList();
 	}
 
 	@Override
 	@Transactional
-	public Empresa_detalles findOne(int id) {
+	public Reportes findOne(int id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		return session.get(Empresa_detalles.class, id);
+		return session.get(Reportes.class, id);
 	}
 
 	@Override
-	@Transactional
-	public void add(Empresa_detalles empresa_detalles) {
+	public void add(Reportes reportes) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(empresa_detalles);
-
+		session.saveOrUpdate(reportes);
 	}
 
 	@Override
-	@Transactional
-	public void up(Empresa_detalles empresa_detalles) {
+	public void up(Reportes reportes) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(empresa_detalles);
+		session.saveOrUpdate(reportes);
 	}
 
 	@Override
-	@Transactional
 	public void del(int id) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(findOne(id));
 	}
-	
-	@Override
-	@Transactional
-	public List<Empresa_detalles> findAll(String busqueda) {
-		// TODO Auto-generated method stub
 
+	@Override
+	public List<Reportes> findAll(String busqueda) {
+		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		Query<Empresa_detalles> query = session.createQuery("SELECT FROM Empresa_detalles au WHERE au.idDetalleEmpresa =: idDetalleEmpresa"
-				+ "au.FechaInicio LIKE : busqueda"
-				+ "au.tipoEmpresa LIKE : busqueda"
-				+ "au.encuestapopularidad LIKE : busqueda"
-				+ "au.Comentarios LIKE : busqueda"
-				+ "au.HorariosAtencion LIKE : busqueda"
-				+ "au.ChatUsuario LIKE : busqueda"
-				+ "au.ChatCliente LIKE : busqueda"
-				+ "au.empresa LIKE : busqueda"
-				+ "au.sucursales LIKE : busqueda", Empresa_detalles.class);
+		Query<Reportes> query = session.createQuery("SELECT FROM Reportes au WHERE au.idReporte =: idReporte"
+				+ "au.reporte LIKE : busqueda"
+				+ "au.fechaReporte LIKE : busqueda"
+				+ "au.descripcion LIKE : busqueda", Reportes.class);
 	
 		query.setParameter("busqueda", "%"+busqueda+"%");
 				return query.getResultList();

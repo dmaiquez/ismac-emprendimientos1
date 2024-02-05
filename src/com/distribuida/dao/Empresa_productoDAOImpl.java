@@ -4,11 +4,13 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.distribuida.entities.Empresa_detalles;
 import com.distribuida.entities.Empresa_producto;
 
 @Repository
@@ -58,6 +60,21 @@ public class Empresa_productoDAOImpl implements Empresa_productoDAO {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(findOne(id));
+	}
+
+	@Override
+	@Transactional
+	public List<Empresa_producto> findAll(String busqueda) {
+//		Session session = sessionFactory.getCurrentSession();
+//		Query<Empresa_producto> query = session.createQuery("SELECT FROM Empresa_producto au WHERE au.idempresa_producto =: idempresa_producto"
+//				+ "au.producto LIKE : busqueda"
+//				+ "au.descripcion LIKE : busqueda"
+//				+ "au.idempresa LIKE : busqueda"
+//				+ "au.idproducto LIKE : busqueda", Empresa_producto.class);
+//	
+//		query.setParameter("busqueda", "%"+busqueda+"%");
+//				return query.getResultList();
+		return null;
 	}
 
 }
