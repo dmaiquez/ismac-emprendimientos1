@@ -1,3 +1,4 @@
+
 package com.distribuida.dto;
 
 import java.util.Date;
@@ -6,7 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.distribuida.dao.ClienteDAO;
+//import com.distribuida.dao.ClienteDAO;
 import com.distribuida.dao.Empresa_productoDAO;
 import com.distribuida.dao.FacturaDAO;
 import com.distribuida.dao.FacturaDetalleDAO;
@@ -22,8 +23,8 @@ import com.distribuida.entities.Pedido;
 @Service
 public class FacturaServiceImpl implements FacturaService {
 
-	@Autowired
-	private ClienteDAO clienteDAO;
+//	@Autowired
+//	private ClienteDAO clienteDAO;
 	@Autowired
 	private PedidoDAO pedidoDAO;
 	@Autowired
@@ -53,11 +54,11 @@ public class FacturaServiceImpl implements FacturaService {
 		// TODO Auto-generated method stub
 		Factura factura = new Factura(idFactura, numFactura,  fechaFactura,  totalNeto, iva, total);
 		
-		Cliente cliente = clienteDAO.findOne(idCliente);
+		//Cliente cliente = clienteDAO.findOne(idCliente);
 		Pedido pedido = pedidoDAO.findOne(idPedido);
 		FormaPago formapago = formapagoDAO.findOne(idFormaPago);
 		
-		factura.setCliente(cliente);
+		//factura.setCliente(cliente);
 		factura.setPedido(pedido);
 		factura.setFormaPago(formapago);
 		
