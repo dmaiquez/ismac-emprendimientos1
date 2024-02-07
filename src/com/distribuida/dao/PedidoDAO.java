@@ -15,4 +15,6 @@ public interface PedidoDAO {
 	public void up(Pedido pedido);
 	
 	public void del(int id);
+
+	List<Pedido> findAll(String busqueda);
 }

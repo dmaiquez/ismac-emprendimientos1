@@ -10,9 +10,11 @@ public interface FormaPagoDAO {
 	
 	public FormaPago findOne(int id);
 	
-	public void add(FormaPago formaspago);
+	public void add(FormaPago fomaPago);
 	
-	public void up(FormaPago formaspago);
+	public void up(FormaPago fomaPago);
 	
 	public void del(int id);
+
+	List<FormaPago> findAll(String busqueda);
 }
