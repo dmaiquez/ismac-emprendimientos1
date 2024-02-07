@@ -4,12 +4,13 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import com.distribuida.entities.FormaPago;
+
 
 @Repository
 public class FormaPagoDAOImpl implements FormaPagoDAO {
@@ -35,18 +36,18 @@ public class FormaPagoDAOImpl implements FormaPagoDAO {
 
 	@Override
 	@Transactional
-	public void add(FormaPago formaspago) {
+	public void add(FormaPago formaPago) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(formaspago);
+		session.saveOrUpdate(formaPago);
 	}
 
 	@Override
 	@Transactional
-	public void up(FormaPago formaspago) {
+	public void up(FormaPago formaPago) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(formaspago);
+		session.saveOrUpdate(formaPago);
 	}
 
 	@Override
@@ -56,5 +57,14 @@ public class FormaPagoDAOImpl implements FormaPagoDAO {
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(findOne(id));
 	}
-
+	@Override
+	public List<FormaPago> findAll(String busqueda) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		Query<FormaPago> query = session.createQuery("SELECT FROM FormaPago au WHERE au.idFormaPago =: idFormaPago"
+				+ "au.FormaPago LIKE : busqueda"
+				+ "au.Descripcion LIKE : busqueda", FormaPago.class);
+	
+		query.setParameter("busqueda", "%"+busqueda+"%");
+				return query.getResultList();}
 }
