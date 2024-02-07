@@ -79,25 +79,25 @@ public class PrincipalCliente {
 	//CRUD
 	
 	
-	add
-	cliente cliente1 = new cliente();
-	clienteDAO.add();
-	
-	cliente cliente2 = new cliente();
-	clienteDAO.add(cliente2);
-	
+//	add
+//	cliente cliente1 = new cliente();
+//	clienteDAO.add();
+//	
+//	cliente cliente2 = new cliente();
+//	clienteDAO.add(cliente2);
+//	
 //	//del
 //	clienteDAO.del();
 	
-	System.out.println(cliente.toString());
+//	System.out.println(cliente.toString());
 	
 //	//findAll
-//			List<cliente> clientes = clienteDAO.findAll();
+		List<cliente> clientes = clienteDAO.findAll();
 //			
 //	
-//	for (cliente clientes2 : clientes) {
-//		System.out.println(clientes2.toString());
-//	}
+for (cliente clientes2 : clientes) {
+	System.out.println(clientes2.toString());
+}
 //			
 //			//findOne
 //			//clientes cliente = clienteDAO.findOne(1);

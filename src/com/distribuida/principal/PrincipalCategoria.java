@@ -16,16 +16,16 @@ public class PrincipalCategoria {
 		
 		//CRUD
 
-		Categoria categoria1 = new Categoria(0,"Seccion","Descripcion");
-		categoriaDAO.add(categoria1);
-		System.out.println(categoriaDAO.findOne(11));
-		
-		
-		Categoria categoria3 = new Categoria(11,"Seccion11","Descripcion11");
-		categoriaDAO.up(categoria3);
-		System.out.println(categoriaDAO.findOne(11));
-				
-		try { categoriaDAO.del(11); } catch (Exception e) {e.printStackTrace();	}
+//		Categoria categoria1 = new Categoria(0,"Seccion","Descripcion");
+//		categoriaDAO.add(categoria1);
+//		System.out.println(categoriaDAO.findOne(11));
+//		
+//		
+//		Categoria categoria3 = new Categoria(11,"Seccion11","Descripcion11");
+//		categoriaDAO.up(categoria3);
+//		System.out.println(categoriaDAO.findOne(11));
+//				
+//		try { categoriaDAO.del(11); } catch (Exception e) {e.printStackTrace();	}
 	
 		
 		for(Categoria categoria:categoriaDAO.findAll()) {
