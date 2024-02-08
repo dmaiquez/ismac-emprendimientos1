@@ -58,18 +58,30 @@ public class Perfil_empresaDAOImpl implements Perfil_empresaDAO {
 		session.delete(findOne(id));
 	}
 
+//	@Override
+//	public List<Perfil_empresa> findAll(String busqueda) {
+//		// TODO Auto-generated method stub
+//		Session session = sessionFactory.getCurrentSession();
+//		Query<Perfil_empresa> query = session.createQuery("SELECT FROM Perfil_empresa au WHERE au.idPerfilEmpresa =: idPerfilEmpresa"
+//				+ "au.logo LIKE : busqueda"
+//				+ "au.OpcColor1 LIKE : busqueda"
+//				+ "au.OpcColor2 LIKE : busqueda"
+//				+ "au.GamaColor LIKE : busqueda", Perfil_empresa.class);
+//	
+//		query.setParameter("busqueda", "%"+busqueda+"%");
+//				return query.getResultList();
+//	}
 	@Override
 	public List<Perfil_empresa> findAll(String busqueda) {
-		// TODO Auto-generated method stub
-		Session session = sessionFactory.getCurrentSession();
-		Query<Perfil_empresa> query = session.createQuery("SELECT FROM Perfil_empresa au WHERE au.idPerfilEmpresa =: idPerfilEmpresa"
-				+ "au.logo LIKE : busqueda"
-				+ "au.OpcColor1 LIKE : busqueda"
-				+ "au.OpcColor2 LIKE : busqueda"
-				+ "au.GamaColor LIKE : busqueda", Perfil_empresa.class);
-	
-		query.setParameter("busqueda", "%"+busqueda+"%");
-				return query.getResultList();
+	    Session session = sessionFactory.getCurrentSession();
+	    Query<Perfil_empresa> query = session.createQuery("FROM Perfil_empresa au WHERE "
+	            + "au.logo LIKE :busqueda OR "
+	            + "au.OpcColor1 LIKE :busqueda OR "
+	            + "au.OpcColor2 LIKE :busqueda OR "
+	            + "au.GamaColor LIKE :busqueda", Perfil_empresa.class);
+
+	    query.setParameter("busqueda", "%" + busqueda + "%");
+	    return query.getResultList();
 	}
 
 }

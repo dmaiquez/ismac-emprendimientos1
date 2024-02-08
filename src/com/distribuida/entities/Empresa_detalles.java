@@ -35,7 +35,7 @@ public class Empresa_detalles {
 	private String Comentarios;
 	@Column(name = "HorariosAtencion")
 	private String HorariosAtencion;
-	@Column(name = "ChatUsario")
+	@Column(name = "ChatUsuario")
 	private String ChatUsuario;
 	@Column(name = "ChatCliente")
 	private String ChatCliente; 
@@ -150,15 +150,17 @@ public class Empresa_detalles {
 		this.empresa = empresa;
 	}
 
+
+
 	@Override
 	public String toString() {
 		return "Empresa_detalles [idDetalleEmpresa=" + idDetalleEmpresa + ", FechaInicio=" + FechaInicio
 				+ ", tipoEmpresa=" + tipoEmpresa + ", encuestapopularidad=" + encuestapopularidad + ", Comentarios="
 				+ Comentarios + ", HorariosAtencion=" + HorariosAtencion + ", ChatUsuario=" + ChatUsuario
-				+ ", ChatCliente=" + ChatCliente + ", sucursales=" + sucursales + ", empresa=" + empresa + "]";
+				+ ", ChatCliente=" + ChatCliente + ", empresa=" + empresa + ", sucursales=" + sucursales + "]";
 	}
 
-	
+
 	
 	
 

@@ -18,5 +18,5 @@ public List<Empresa_detalles> findAll();
 	
 	public void del(int id);
 
-	public List<Empresa_detalles> findAll(String busqueda);
+	public List<Empresa_detalles> findCustom(String busqueda);
 }

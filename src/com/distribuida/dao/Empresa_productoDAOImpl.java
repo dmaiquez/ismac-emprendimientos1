@@ -65,16 +65,15 @@ public class Empresa_productoDAOImpl implements Empresa_productoDAO {
 	@Override
 	@Transactional
 	public List<Empresa_producto> findAll(String busqueda) {
-//		Session session = sessionFactory.getCurrentSession();
-//		Query<Empresa_producto> query = session.createQuery("SELECT FROM Empresa_producto au WHERE au.idempresa_producto =: idempresa_producto"
-//				+ "au.producto LIKE : busqueda"
-//				+ "au.descripcion LIKE : busqueda"
-//				+ "au.idempresa LIKE : busqueda"
-//				+ "au.idproducto LIKE : busqueda", Empresa_producto.class);
-//	
-//		query.setParameter("busqueda", "%"+busqueda+"%");
-//				return query.getResultList();
-		return null;
+		Session session = sessionFactory.getCurrentSession();
+		Query<Empresa_producto> query = session.createQuery("SELECT FROM Empresa_producto au WHERE au.idempresa_producto =: idempresa_producto"
+				+ "au.producto LIKE : busqueda"
+				+ "au.descripcion LIKE : busqueda"
+				+ "au.idempresa LIKE : busqueda"
+				+ "au.idproducto LIKE : busqueda", Empresa_producto.class);
+	
+		query.setParameter("busqueda", "%"+busqueda+"%");
+				return query.getResultList();
 	}
 
 }
