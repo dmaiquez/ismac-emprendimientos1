@@ -49,6 +49,5 @@ public class FormaPagoServiceImpl implements FormaPagoService {
 		// TODO Auto-generated method stub
 		return formaPagoDAO.findAll(busqueda);
 	}
-
-		
+	
 	}

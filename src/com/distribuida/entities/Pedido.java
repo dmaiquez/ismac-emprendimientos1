@@ -36,11 +36,11 @@ public class Pedido {
 	public Pedido() {}
 
 	
-	public Pedido(int idPedido, String numPedido, Date fechapedido, int confirmacionPedido) {
+	public Pedido(int idPedido, String numPedido, Date fechaPedido, int confirmacionPedido) {
 
 		this.idPedido = idPedido;
 		this.numPedido = numPedido;
-		this.fechapedido = fechapedido;
+		this.fechapedido = fechaPedido;
 		this.confirmacionPedido = confirmacionPedido;
 	}
 
@@ -62,11 +62,11 @@ public class Pedido {
 		this.numPedido = numPedido;
 	}
 
-	public Date getFechapedido() {
+	public Date getFechaPedido() {
 		return fechapedido;
 	}
 
-	public void setFechapedido(Date fechapedido) {
+	public void setFechaPedido(Date fechapedido) {
 		this.fechapedido = fechapedido;
 	}
 

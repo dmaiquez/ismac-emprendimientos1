@@ -23,8 +23,8 @@
           destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/dbemprendimientos" />
-        <property name="user" value="root" />
-        <property name="password" value="root" /> 
+        <property name="user" value="root123" />
+        <property name="password" value="Pablo.200133" /> 
 
         <!-- Propiedades connection pool para C3P0 -->
         <property name="minPoolSize" value="5" />

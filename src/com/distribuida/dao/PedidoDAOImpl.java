@@ -62,10 +62,8 @@ public class PedidoDAOImpl implements PedidoDAO {
 	public List<Pedido> findAll(String busqueda) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		Query<Pedido> query = session.createQuery("SELECT FROM Pedido au WHERE au.idPedido =: idPedido"
-				+ "au.numeroPedido LIKE : busqueda"
-				+ "au.fechaPedido LIKE : busqueda"
-				+ "au.confirmacionPedido LIKE : busqueda", Pedido.class);
+		Query<Pedido> query = session.createQuery("SELECT FROM Pedido au WHERE "
+				+ "au.numeroPedido LIKE : busqueda ", Pedido.class);
 	
 		query.setParameter("busqueda", "%"+busqueda+"%");
 				return query.getResultList();}

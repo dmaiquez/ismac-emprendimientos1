@@ -61,8 +61,7 @@ public class FormaPago {
 
 	@Override
 	public String toString() {
-		return "FormaPago [idFormaPago=" + idFormaPago + ", formaspago=" + formaspago + ", descripcion=" + descripcion
-				+ "]";
+		return "FormaPago [idFormaPago=" + idFormaPago + ", formaspago=" + formaspago + ", descripcion=" + descripcion + "]";
 	}
 	
 	
