@@ -1,6 +1,6 @@
 package com.distribuida.dto;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -77,9 +77,9 @@ public class Empresa_detallesServiceImpl implements Empresa_detallesService {
 	}
 
 	@Override
-	public List<Empresa_detalles> findAll(String busqueda) {
+	public List<Empresa_detalles> findCustom(String busqueda) {
 		// TODO Auto-generated method stub
-		return empresa_detallesDAO.findAll(busqueda);
+		return empresa_detallesDAO.findCustom(busqueda);
 	}
 	
 	

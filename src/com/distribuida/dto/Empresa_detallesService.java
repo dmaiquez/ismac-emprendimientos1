@@ -1,6 +1,6 @@
 package com.distribuida.dto;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import com.distribuida.entities.Empresa_detalles;
@@ -20,5 +20,5 @@ public List<Empresa_detalles> finAll();
 	
 	public void del(int id);
 	
-	public List<Empresa_detalles> findAll(String busqueda);
+	public List<Empresa_detalles> findCustom(String busqueda);
 }

@@ -20,6 +20,6 @@ public interface Empresa_productoService {
 	
 	public void del(int id);
 	
-	public List<Empresa_producto> findAll(String busqueda);
+	public List<Empresa_producto> findCustom(String busqueda);
 
 }

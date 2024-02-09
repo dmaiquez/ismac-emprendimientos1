@@ -8,7 +8,7 @@ public interface Empresa_detallesDAO {
 	
 	//DAO IMPL
 
-	public List<Empresa_detalles> findAll();
+public List<Empresa_detalles> findAll();
 	
 	public Empresa_detalles findOne(int id);
 	
@@ -18,5 +18,5 @@ public interface Empresa_detallesDAO {
 	
 	public void del(int id);
 
-	public List<Empresa_detalles> findAll(String busqueda);
+	public List<Empresa_detalles> findCustom(String busqueda);
 }

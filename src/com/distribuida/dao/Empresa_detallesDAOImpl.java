@@ -63,23 +63,20 @@ public class Empresa_detallesDAOImpl implements Empresa_detallesDAO {
 	
 	@Override
 	@Transactional
-	public List<Empresa_detalles> findAll(String busqueda) {
-		// TODO Auto-generated method stub
+	public List<Empresa_detalles> findCustom(String busqueda) {
+	    Session session = sessionFactory.getCurrentSession();
+	    Query<Empresa_detalles> query = session.createQuery("FROM Empresa_detalles au WHERE "
+	            + "au.tipoEmpresa LIKE :busqueda OR "
+	            + "au.encuestapopularidad LIKE :busqueda OR "
+	            + "au.Comentarios LIKE :busqueda OR "
+	            + "au.ChatUsuario LIKE :busqueda OR "
+	            + "au.ChatCliente LIKE :busqueda OR "
+	            + "au.HorariosAtencion LIKE :busqueda OR "
+	            + "au.empresa LIKE :busqueda OR "
+	            + "au.sucursales LIKE :busqueda", Empresa_detalles.class);
 
-		Session session = sessionFactory.getCurrentSession();
-		Query<Empresa_detalles> query = session.createQuery("SELECT FROM Empresa_detalles au WHERE au.idDetalleEmpresa =: idDetalleEmpresa"
-				+ "au.FechaInicio LIKE : busqueda"
-				+ "au.tipoEmpresa LIKE : busqueda"
-				+ "au.encuestapopularidad LIKE : busqueda"
-				+ "au.Comentarios LIKE : busqueda"
-				+ "au.HorariosAtencion LIKE : busqueda"
-				+ "au.ChatUsuario LIKE : busqueda"
-				+ "au.ChatCliente LIKE : busqueda"
-				+ "au.empresa LIKE : busqueda"
-				+ "au.sucursales LIKE : busqueda", Empresa_detalles.class);
-	
-		query.setParameter("busqueda", "%"+busqueda+"%");
-				return query.getResultList();
+	    query.setParameter("busqueda", "%" + busqueda + "%");
+	    return query.getResultList();
 	}
-
+	
 }

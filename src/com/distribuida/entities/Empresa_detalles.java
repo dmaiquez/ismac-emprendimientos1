@@ -35,7 +35,7 @@ public class Empresa_detalles {
 	private String Comentarios;
 	@Column(name = "HorariosAtencion")
 	private String HorariosAtencion;
-	@Column(name = "ChatUsario")
+	@Column(name = "ChatUsuario")
 	private String ChatUsuario;
 	@Column(name = "ChatCliente")
 	private String ChatCliente; 
