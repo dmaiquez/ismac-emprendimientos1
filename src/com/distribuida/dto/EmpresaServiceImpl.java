@@ -17,13 +17,13 @@ public class EmpresaServiceImpl implements EmpresaService {
 	private EmpresaDAO empresaDAO;
 	
 	@Override
-	public List<Empresa> finAll() {
+	public List<Empresa> findAll() {
 		// TODO Auto-generated method stub
 		return empresaDAO.findAll();
 	}
 
 	@Override
-	public Empresa finOne(int id) {
+	public Empresa findOne(int id) {
 		// TODO Auto-generated method stub
 		return empresaDAO.findOne(id);
 	}

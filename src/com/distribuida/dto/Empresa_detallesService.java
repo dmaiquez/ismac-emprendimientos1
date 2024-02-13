@@ -21,4 +21,6 @@ public List<Empresa_detalles> finAll();
 	public void del(int id);
 	
 	public List<Empresa_detalles> findCustom(String busqueda);
+
+	
 }

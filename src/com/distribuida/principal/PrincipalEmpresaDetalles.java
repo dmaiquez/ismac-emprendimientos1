@@ -18,19 +18,19 @@ public class PrincipalEmpresaDetalles {
         
         Empresa_detalles empresaDeAdd = new Empresa_detalles(0,new Date(),"Comidas",4.0,"Buen servicio","8AM - 5PM","Habiliado","Habilitado");
 		empresa_detallesDAO.add(empresaDeAdd);		
-		System.out.println(empresa_detallesDAO.findOne(9));
+		System.out.println(empresa_detallesDAO.findOne(2));
 
-		Empresa_detalles empresaDeUp = new Empresa_detalles(6,new Date(),"Comidas",4.0,"Buen servicio","8AM - 5PM","Habiliado","Habilitado");
+		Empresa_detalles empresaDeUp = new Empresa_detalles(2,new Date(),"Comidas",4.0,"Buen servicio","8AM - 5PM","Habiliado","Habilitado");
 		empresa_detallesDAO.up(empresaDeUp);
-		System.out.println(empresa_detallesDAO.findOne(9));
+		System.out.println(empresa_detallesDAO.findOne(2));
 		
-		try { empresa_detallesDAO.del(9); } catch (Exception e) {e.printStackTrace();	}
+		try { empresa_detallesDAO.del(1); } catch (Exception e) {e.printStackTrace();	}
 
 		for(Empresa_detalles empresaDeFindAll:empresa_detallesDAO.findAll()) {
 			System.out.println(empresaDeFindAll.toString());
 			
 		}
-//        
+        
 //       // Define la cadena de búsqueda
 //       String busqueda = "10AM";
 //

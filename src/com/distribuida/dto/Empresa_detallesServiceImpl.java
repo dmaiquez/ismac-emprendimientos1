@@ -43,7 +43,8 @@ public class Empresa_detallesServiceImpl implements Empresa_detallesService {
 		Empresa empresa = empresaDAO.findOne(fk_idEmpresa);
 		Sucursales sucursales = sucursalesDAO.findOne(fk_idSucursal);
 		
-		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa, encuestapopularidad,comentarios, horariosAtencion, chatUsuario, chatCliente);
+		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa, 
+				encuestapopularidad,comentarios,horariosAtencion, chatUsuario, chatCliente);
 		
 		empresa_detalles.setEmpresa(empresa);
 		empresa_detalles.setSucursales(sucursales);
@@ -61,7 +62,8 @@ public class Empresa_detallesServiceImpl implements Empresa_detallesService {
 		Empresa empresa = empresaDAO.findOne(fk_idEmpresa);
 		Sucursales sucursales = sucursalesDAO.findOne(fk_idSucursal);
 		
-		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa, encuestapopularidad,comentarios, horariosAtencion, chatUsuario, chatCliente);
+		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa,
+				encuestapopularidad,comentarios, horariosAtencion, chatUsuario, chatCliente);
 		
 		empresa_detalles.setEmpresa(empresa);
 		empresa_detalles.setSucursales(sucursales);
