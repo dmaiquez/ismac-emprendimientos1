@@ -1,6 +1,6 @@
 package com.distribuida.dto;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +43,8 @@ public class Empresa_detallesServiceImpl implements Empresa_detallesService {
 		Empresa empresa = empresaDAO.findOne(fk_idEmpresa);
 		Sucursales sucursales = sucursalesDAO.findOne(fk_idSucursal);
 		
-		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa, encuestapopularidad,comentarios, horariosAtencion, chatUsuario, chatCliente);
+		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa, 
+				encuestapopularidad,comentarios,horariosAtencion, chatUsuario, chatCliente);
 		
 		empresa_detalles.setEmpresa(empresa);
 		empresa_detalles.setSucursales(sucursales);
@@ -61,7 +62,8 @@ public class Empresa_detallesServiceImpl implements Empresa_detallesService {
 		Empresa empresa = empresaDAO.findOne(fk_idEmpresa);
 		Sucursales sucursales = sucursalesDAO.findOne(fk_idSucursal);
 		
-		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa, encuestapopularidad,comentarios, horariosAtencion, chatUsuario, chatCliente);
+		Empresa_detalles empresa_detalles = new Empresa_detalles(idDetalleEmpresa, fechaInicio, tipoEmpresa,
+				encuestapopularidad,comentarios, horariosAtencion, chatUsuario, chatCliente);
 		
 		empresa_detalles.setEmpresa(empresa);
 		empresa_detalles.setSucursales(sucursales);
@@ -77,9 +79,9 @@ public class Empresa_detallesServiceImpl implements Empresa_detallesService {
 	}
 
 	@Override
-	public List<Empresa_detalles> findAll(String busqueda) {
+	public List<Empresa_detalles> findCustom(String busqueda) {
 		// TODO Auto-generated method stub
-		return empresa_detallesDAO.findAll(busqueda);
+		return empresa_detallesDAO.findCustom(busqueda);
 	}
 	
 	

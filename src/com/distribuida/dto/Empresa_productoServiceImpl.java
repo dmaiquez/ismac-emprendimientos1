@@ -73,9 +73,9 @@ public class Empresa_productoServiceImpl implements Empresa_productoService {
 	}
 
 	@Override
-	public List<Empresa_producto> findAll(String busqueda) {
+	public List<Empresa_producto> findCustom(String busqueda) {
 		// TODO Auto-generated method stub
-		return empresa_productoDAO.findAll(busqueda);
+		return empresa_productoDAO.findCustom(busqueda);
 	}
 
 	
